@@ -26,7 +26,7 @@ func SQLOrderQuery(from string, to string) string {
 			b.line_items_retail_price_shipping_discounted_price_sum as ordershippingprice,
 			b.line_items_retail_price_shipping_tax_sum as ordershippingtax,
 			b.coupon_code as coupon,
-			d.[schema] as [schema],
+			d.[Schema] as [schema],
 			d.McpSku as mcpsku
         from columbus.columbus.line_item a with(nolock)
             join columbus.columbus.sales_order b on a.sales_order_row_id = b.row_id 
