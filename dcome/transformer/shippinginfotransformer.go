@@ -47,6 +47,7 @@ func (t *shippingInfoTransformer) Finish(outputChan chan data.JSON, killChan cha
 		transform.Company = resolveEmpty(shippinginfo.Company)
 		transform.Name = resolveEmpty(shippinginfo.First_Name + shippinginfo.Middle_Name + shippinginfo.Last_Name)
 		transform.Phone = resolveEmpty(shippinginfo.Phone)
+		transform.OrderCreated = resolveEmpty(shippinginfo.Order_Created_Date)
 		transform.Created = resolveEmpty(shippinginfo.Created_At)
 
 		transforms = append(transforms, transform)

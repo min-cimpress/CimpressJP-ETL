@@ -22,6 +22,7 @@ func SQLShippingQuery(from string, to string) string {
 		t.middle_name,
 		t.last_name,
 		t.phone,
+		t.order_created_date,
 		t.created_at
 		from lms.trackings t join lms.skus s on t.sku = s.value collate utf8_unicode_ci where t.created_at between '%s' and '%s' and t.long_item_id != '';
 	`, from, to)
